@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ========== 可自定义主题颜色 ========== -->
+
+    <!-- 应用整体背景（按键区域外的部分） -->
+    <color name="app_background">#000000</color>
+
+    <!-- LCD 屏幕区域 -->
+    <color name="lcd_background">#9CB28A</color>
+    <color name="lcd_text">#1A2A10</color>
+    <color name="lcd_text_dim">#4A5A40</color>
+    <color name="lcd_highlight_bg">#2A3A20</color>
+    <color name="lcd_highlight_text">#9CB28A</color>
+
+    <!-- 按键区域背景 -->
+    <color name="keys_background">#222222</color>
+
+    <!-- 普通按键 -->
+    <color name="key_normal_bg">#333333</color>
+    <color name="key_text">#FFFFFF</color>
+
+    <!-- 软键（左右软键） -->
+    <color name="key_soft_bg">#444444</color>
+
+    <!-- 拨打键（绿色） -->
+    <color name="key_call_bg">#2E7D32</color>
+    <color name="key_call_text">#FFFFFF</color>
+
+    <!-- 挂断/电源键（红色） -->
+    <color name="key_end_bg">#C62828</color>
+    <color name="key_end_text">#FFFFFF</color>
+
+    <!-- ========== 以下为兼容旧引用，值同上 ========== -->
+    <color name="phone_body">@color/app_background</color>
+    <color name="phone_body_dark">#000000</color>
+    <color name="phone_body_light">#333333</color>
+    <color name="key_background">@color/key_normal_bg</color>
+    <color name="key_background_pressed">#555555</color>
+    <color name="key_text_sub">#AAAAAA</color>
+    <color name="key_soft">@color/key_soft_bg</color>
+    <color name="key_call_green">@color/key_call_bg</color>
+    <color name="key_end_red">@color/key_end_bg</color>
+    <color name="lcd_background_dark">#7A8E6A</color>
+    <color name="lcd_cursor">@color/lcd_text</color>
+    <color name="status_bar_bg">#00000000</color>
+</resources>

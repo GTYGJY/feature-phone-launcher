@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ========== 上半部分：屏幕显示区 ========== -->
+    <LinearLayout
+        android:id="@+id/screenArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+
+        <!-- 状态栏 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvSignal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="--"
+                    android:textSize="20sp"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="--:--"
+                    android:textSize="26sp"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/tvBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="100%"
+                    android:textSize="26sp"
+                    android:includeFontPadding="false" />
+            </FrameLayout>
+
+        <!-- 内容区 -->
+        <FrameLayout
+            android:id="@+id/contentArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/menuContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvMenuTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingVertical="8dp"
+                    android:includeFontPadding="false" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/menuList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/idleScreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvIdleTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--:--"
+                    android:textSize="64sp"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/tvIdleDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="----/--/--"
+                    android:textSize="22sp"
+                    android:layout_marginTop="10dp"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/tvIdleLunar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lunar"
+                    android:textSize="22sp"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/tvIdleCarrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_marginTop="18dp"
+                    android:includeFontPadding="false" />
+            </LinearLayout>
+
+            <!-- 拨号屏幕区域 -->
+            <LinearLayout
+                android:id="@+id/dialerScreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvDialerNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="48sp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingVertical="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDialerMatches"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 底部软键提示 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvLeftSoft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/menu_title"
+                android:textSize="26sp"
+                android:gravity="left"
+                android:visibility="gone"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/tvRightSoft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/menu_contacts"
+                android:textSize="26sp"
+                android:gravity="right"
+                android:visibility="gone"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ========== 下半部分：按键区 ========== -->
+    <LinearLayout
+        android:id="@+id/keysArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- 行1：菜单 | 信息模块 | 通讯录 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLeftSoft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/menu_title"
+                android:textSize="16sp" />
+
+            <View android:layout_width="1dp" android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvInfoModule"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="100%"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false" />
+
+            <View android:layout_width="1dp" android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btnRightSoft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/menu_contacts"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" />
+
+        <!-- 行2：拨打 | 返回 | 挂断 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCall"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/key_call"
+                android:textSize="17sp" />
+
+            <View android:layout_width="1dp" android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/bottomModuleArea"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <TextView
+                    android:id="@+id/tvBottomModuleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:alpha="0.6" />
+                <TextView
+                    android:id="@+id/tvBottomModuleContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btnEnd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/key_end"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <!-- 数字键盘（菜单界面时隐藏） -->
+        <LinearLayout
+            android:id="@+id/keypadArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" />
+
+            <!-- 行1：1 2 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btn1" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="1" android:textSize="26sp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn2" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="2&#10;ABC" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn3" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="3&#10;DEF" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" />
+
+            <!-- 行2：4 5 6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btn4" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="4&#10;GHI" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn5" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="5&#10;JKL" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn6" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="6&#10;MNO" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" />
+
+            <!-- 行3：7 8 9 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btn7" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="7&#10;PQRS" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn8" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="8&#10;TUV" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn9" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="9&#10;WXYZ" android:textSize="26sp" android:lineSpacingExtra="-2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" />
+
+            <!-- 行4：* 0 # -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnStar" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="*" android:textSize="26sp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btn0" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="0" android:textSize="26sp" />
+                <View android:layout_width="1dp" android:layout_height="match_parent" />
+                <Button android:id="@+id/btnPound" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="0dp"
+                    android:minHeight="0dp" android:minWidth="0dp"
+                    android:text="#" android:textSize="26sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

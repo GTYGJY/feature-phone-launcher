@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------
+# Feature Phone Launcher - Git ignore rules
+# Kept ASCII-only on purpose, so it renders correctly in any editor/locale.
+# ---------------------------------------------------------------------------
+
+# Gradle
+.gradle/
+build/
+app/build/
+.gradle-cache/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.hprof
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Machine-specific config
+local.properties
+
+# Signing material - never commit
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+# keep the template (placeholders only)
+!keystore.properties.template
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Logs / dumps
+*.log
+*.stackdump
+crash_log.txt
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# Archives
+*.zip

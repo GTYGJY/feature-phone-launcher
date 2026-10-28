@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 可主题化的颜色属性 -->
+    <attr name="themeAppBackground" format="color" />
+    <attr name="themeLcdBackground" format="color" />
+    <attr name="themeLcdText" format="color" />
+    <attr name="themeLcdTextDim" format="color" />
+    <attr name="themeLcdHighlightBg" format="color" />
+    <attr name="themeLcdHighlightText" format="color" />
+    <attr name="themeKeysBackground" format="color" />
+    <attr name="themeKeyNormalBg" format="color" />
+    <attr name="themeKeyText" format="color" />
+    <attr name="themeKeySoftBg" format="color" />
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 【新增】T9 匹配列表的行布局。
+     之前是在 DialerMatchAdapter 里用代码拼 LinearLayout 再把它内部的 TextView 当 itemView，
+     触发 RecyclerView 的 "ViewHolder views must not be attached when created" 崩溃。
+     改为标准做法：整行作为 itemView，内部两个 TextView 只做子控件。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minHeight="44dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:includeFontPadding="false" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:includeFontPadding="false" />
+</LinearLayout>

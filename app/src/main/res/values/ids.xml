@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="font_size_original" type="id" />
+    <!-- 【新增】列表行缩放时记录原始最小高度 / 原始内边距，避免重复绑定导致数值累加 -->
+    <item name="font_size_original_min_height" type="id" />
+    <item name="font_size_original_padding" type="id" />
+</resources>

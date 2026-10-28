@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 屏幕区域 -->
+    <dimen name="lcd_margin">16dp</dimen>
+    <dimen name="lcd_padding">12dp</dimen>
+    <dimen name="lcd_corner_radius">8dp</dimen>
+    <dimen name="lcd_text_size">16sp</dimen>
+    <dimen name="lcd_title_size">18sp</dimen>
+    <dimen name="lcd_status_size">12sp</dimen>
+
+    <!-- 按键 -->
+    <dimen name="key_height">48dp</dimen>
+    <dimen name="key_margin">4dp</dimen>
+    <dimen name="key_corner_radius">8dp</dimen>
+    <dimen name="key_text_size">20sp</dimen>
+    <dimen name="key_subtext_size">10sp</dimen>
+    <dimen name="key_soft_height">40dp</dimen>
+    <dimen name="key_nav_height">44dp</dimen>
+
+    <!-- 整体 -->
+    <dimen name="phone_padding">12dp</dimen>
+    <dimen name="screen_to_keys_gap">16dp</dimen>
+</resources>

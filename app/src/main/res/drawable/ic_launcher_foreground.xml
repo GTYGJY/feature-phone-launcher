@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 手机外框 -->
+    <path
+        android:fillColor="#9CB28A"
+        android:pathData="M34,20 L74,20 Q78,20 78,24 L78,84 Q78,88 74,88 L34,88 Q30,88 30,84 L30,24 Q30,20 34,20 Z" />
+    <!-- 屏幕 -->
+    <path
+        android:fillColor="#1A2A10"
+        android:pathData="M38,28 L70,28 L70,52 L38,52 Z" />
+    <!-- 按键区 -->
+    <path
+        android:fillColor="#4A4A4A"
+        android:pathData="M38,58 L44,58 L44,62 L38,62 Z M48,58 L54,58 L54,62 L48,62 Z M58,58 L64,58 L64,62 L58,62 Z M38,66 L44,66 L44,70 L38,70 Z M48,66 L54,66 L54,70 L48,70 Z M58,66 L64,66 L64,70 L58,70 Z M38,74 L44,74 L44,78 L38,78 Z M48,74 L54,74 L54,78 L48,78 Z M58,74 L64,74 L64,78 L58,78 Z" />
+</vector>

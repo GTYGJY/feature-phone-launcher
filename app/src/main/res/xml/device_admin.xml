@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <!-- 功能机模式必需的最小权限 -->
+        <force-lock />
+        <disable-keyguard-features />
+        <disable-camera />
+    </uses-policies>
+</device-admin>

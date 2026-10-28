@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/lcd_background" />
+    <corners android:radius="@dimen/lcd_corner_radius" />
+    <stroke
+        android:width="3dp"
+        android:color="@color/phone_body_dark" />
+    <padding
+        android:left="@dimen/lcd_padding"
+        android:top="@dimen/lcd_padding"
+        android:right="@dimen/lcd_padding"
+        android:bottom="@dimen/lcd_padding" />
+</shape>

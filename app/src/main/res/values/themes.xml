@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础主题 - 所有颜色在代码中通过ColorManager动态设置 -->
+    <style name="Theme.FeaturePhone" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#F5F5DC</item>
+        <item name="android:windowAnimationStyle">@style/ActivityTransition</item>
+    </style>
+
+    <style name="ActivityTransition" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!-- 全屏主题 - 主界面使用 -->
+    <style name="Theme.FeaturePhone.Fullscreen" parent="Theme.FeaturePhone">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">功能机模式</string>
+    <string name="service_name">功能机模式服务</string>
+    <string name="service_notification_title">功能机模式运行中</string>
+    <string name="service_notification_text">手机已切换为功能机模式</string>
+
+    <!-- 菜单 -->
+    <string name="menu_dialer">电话</string>
+    <string name="menu_messages">信息</string>
+    <string name="menu_contacts">通讯录</string>
+    <string name="menu_call_log">通话记录</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_exit">退出功能机模式</string>
+    <string name="menu_apps">软件</string>
+
+    <string name="menu_title">菜单</string>
+    <string name="lunar">农历</string>
+    <!-- 按键 -->
+    <string name="key_left">左软键</string>
+    <string name="key_right">右软键</string>
+    <string name="key_ok">确认</string>
+    <string name="key_back">返回</string>
+    <string name="key_call">拨打</string>
+    <string name="key_end">挂断/电源</string>
+
+    <!-- 状态 -->
+    <string name="status_no_signal">无信号</string>
+    <string name="status_searching">搜索网络…</string>
+
+    <!-- 设置 -->
+    <string name="settings_network">联网设置</string>
+    <string name="network_explain_title">联网设置解释</string>
+    <string name="settings_color">颜色设置</string>
+    <string name="settings_display">显示设置</string>
+    <string name="settings_language_unit">语言和单位设置</string>
+    <string name="settings_other">其他设置</string>
+    <string name="settings_kiosk_mode">Kiosk 锁定模式</string>
+    <string name="settings_kiosk_desc">启用后无法退出本应用（需设备所有者）</string>
+    <string name="settings_default_launcher">设为默认桌面</string>
+    <string name="settings_permissions">权限管理</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_version">版本 1.0</string>
+
+    <!-- 语言和单位 -->
+    <string name="lang_unit_title">语言和单位设置</string>
+    <string name="lang_switch">语言</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_english">English</string>
+    <string name="unit_settings">单位设置</string>
+    <string name="unit_title">单位设置</string>
+    <string name="unit_temperature">温度单位</string>
+    <string name="unit_celsius">摄氏度 (°C)</string>
+    <string name="unit_fahrenheit">华氏度 (°F)</string>
+    <string name="unit_date_format">日期格式</string>
+    <string name="date_ymd">年月日</string>
+    <string name="date_dmy">日月年</string>
+
+    <string name="dial_title">拨号</string>
+    <!-- 拨号 -->
+    <string name="dial_hint">输入号码</string>
+    <string name="dial_call">拨打</string>
+    <string name="dial_clear">清除</string>
+
+    <!-- 短信 -->
+    <string name="sms_new">新信息</string>
+    <string name="sms_inbox">收件箱</string>
+    <string name="sms_sent">已发送</string>
+    <string name="sms_draft">草稿箱</string>
+    <string name="sms_input">输入信息内容</string>
+    <string name="sms_send">发送</string>
+
+    <!-- 通用 -->
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="empty">暂无内容</string>
+    <string name="admin_explain_1">设备管理员（Device Administrator）是Android系统提供的一种系统级权限。激活后，本应用可以执行以下操作：锁定屏幕、禁用相机、禁用锁屏功能等。\n\n在本应用中，设备管理员主要用于配合Kiosk锁定模式使用。如果不需要Kiosk模式，可以不激活。\n\n激活方式：连续点击5次设备管理员选项，系统会弹出激活确认页面。\n\n取消方式：已激活后，点击设备管理员选项，按提示跳转到系统安全设置页面，在设备管理员列表中手动取消。注意：应用无法直接取消自己的设备管理员权限，这是Android的安全机制，必须由用户在系统设置中手动操作。</string>
+
+    <string name="admin_explain_2">Kiosk锁定模式（单应用模式）启用后，手机将被完全锁定，只能使用本应用。用户无法按home键返回桌面、无法打开最近任务、无法下拉状态栏、无法进入系统设置。\n\n这比默认桌面更严格：默认桌面只是按home键回到本应用，但用户仍可通过最近任务、设置等方式退出；Kiosk模式是真正的锁定。\n\n启用前提：需要先通过ADB命令将本应用设为设备所有者（Device Owner），命令如下：\nadb shell dpm set-device-owner com.featurephone.launcher/.DeviceAdminReceiver\n\n设为设备所有者后，在其他设置中点击Kiosk锁定模式即可启用。\n\n关闭方式：在其他设置中再次点击Kiosk锁定模式即可关闭，关闭后会自动退出锁定状态，恢复正常使用。\n\n注意：如果未设为设备所有者，Kiosk模式无法启用，点击会提示需要ADB设置。</string>
+
+    <string name="admin_explain_3">将本应用设为默认桌面后，按home键会直接回到本应用主界面，而不是系统桌面。这是最简单的防退出方式，适合日常使用。\n\n设置方式：点击默认桌面选项，在系统设置中选择本应用。</string>
+
+    <string name="admin_explain_4">• 日常使用/给老人用：建议只开默认桌面即可，简单方便。\n• 需要完全锁定/防止退出：建议使用Kiosk模式（需ADB设置设备所有者）。\n• Kiosk 模式的前提是「设备所有者（Device Owner）」，只能用 ADB 设置；仅激活「设备管理员」并不会让 Kiosk 生效，设备管理员只提供锁屏、禁用相机等基础权限。</string>
+
+    <string name="admin_explain_5">后台应用管理可以暂停或恢复手机中的第三方应用。被暂停的应用无法运行，也不会在后台偷跑耗电，相当于"冻结"了该应用。\n\n使用前提：需要先通过ADB命令将本应用设为设备所有者（Device Owner），命令如下：\nadb shell dpm set-device-owner com.featurephone.launcher/.DeviceAdminReceiver\n\n设为设备所有者后，在其他设置中点击后台应用管理，即可看到所有第三方应用列表。点击应用可暂停或恢复。\n\n注意：系统应用和本应用不会出现在列表中，防止误操作导致系统异常。暂停应用后，该应用的图标仍在桌面，但点击无法打开，需要在此处恢复后才能正常使用。</string>
+
+    <string name="admin_explain_6">界面模式提供两种菜单显示方式：\n\n标准模式：显示全部功能菜单，包括电话、信息、通讯录、软件、设置、快捷应用等，适合需要完整功能的用户。\n\n极简模式：只显示电话、信息、通讯录、设置四个最常用功能，菜单更简洁，适合老年人或只需要基础功能的用户。\n\n切换方式：在其他设置中点击界面模式，即可在标准模式和极简模式之间切换。切换后立即生效，无需重启。</string>
+
+    <string name="admin_explain_7">重要风险提示：\n\n设备管理员、Kiosk锁定模式、后台应用管理等功能需要通过ADB命令或系统高级设置开启，属于高级功能。\n\n本软件并未对所有品牌、所有系统版本的手机进行完善测试，在非必要情况下不建议开启这些功能。\n\n可能造成的严重后果包括但不限于：\n• 无法正常退出功能机模式\n• 无法卸载本应用\n• 系统设置异常\n• 其他应用无法正常使用\n\n如因开启这些功能导致任何问题，本软件不承担责任。建议在充分了解相关操作后再使用，或在专业人士指导下操作。</string>
+
+    <!-- 界面标题 -->
+    <string name="color_title">颜色设置</string>
+    <string name="display_title">显示设置</string>
+    <string name="other_title">其他设置</string>
+    <string name="network_title">联网设置</string>
+    <string name="contacts_title">通讯录</string>
+    <string name="call_log_title">通话记录</string>
+    <string name="messages_title">信息</string>
+    <string name="apps_title">软件</string>
+
+    <!-- 设置项 -->
+    <string name="screen_text_color">屏幕文字色</string>
+    <string name="screen_bg_color">屏幕背景色</string>
+    <string name="key_text_color">按键文字色</string>
+    <string name="key_bg_color">按键背景色</string>
+    <string name="font_size">字体大小</string>
+    <string name="display_module1">显示模块1</string>
+    <string name="display_module2">显示模块2</string>
+    <string name="shortcut_manager">快捷应用管理</string>
+    <string name="device_admin">设备管理员</string>
+    <string name="default_launcher">默认桌面</string>
+    <string name="permissions">权限管理</string>
+    <string name="admin_explain_title">设备管理员等功能解释</string>
+    <string name="network_function">联网功能</string>
+    <string name="mobile_data">移动数据</string>
+    <string name="bluetooth">蓝牙</string>
+
+    <!-- 颜色 -->
+    <string name="color_black">黑色</string>
+    <string name="color_white">白色</string>
+    <string name="color_red">红色</string>
+    <string name="color_dark_gray">深灰</string>
+
+    <!-- 快捷操作 -->
+    <string name="quick_black_white">快捷黑底白字</string>
+    <string name="quick_white_black">快捷白底黑字</string>
+    <string name="restore_default">恢复默认颜色</string>
+
+    <!-- 空状态 -->
+    <string name="no_apps">暂无应用</string>
+    <string name="no_call_log">暂无通话记录</string>
+    <string name="no_contacts">暂无联系人</string>
+    <string name="no_sms">暂无短信</string>
+
+    <!-- 其他 -->
+    <string name="add">添加</string>
+    <string name="new_message">新建信息</string>
+    <string name="font_standard">标准</string>
+    <string name="module_battery">电量</string>
+    <string name="module_blank">空白</string>
+    <string name="not_enabled">未启用</string>
+    <string name="not_activated">未激活</string>
+    <string name="click_to_set">点击设置</string>
+    <string name="added_count">已添加 %1$d/8 个</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/screenArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="防护提示"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.4"
+                android:text="一、来电防护功能\n\n本软件本身不实现来电防护功能（如陌生来电静音、骚扰拦截等），因为这些功能需要系统电话应用权限，强行接管可能导致电话无法正常接听。\n\n您可以直接使用手机自带的电话APP中的防护功能：\n1. 打开手机自带的“电话”应用\n2. 进入设置 → 骚扰拦截 / 来电防护\n3. 开启您需要的防护功能（如陌生号码静音、骚扰电话拦截、广告推销拦截等）\n\n这样既安全又可靠，不会因为本软件的问题导致电话接不了。\n\n二、来电全屏显示设置\n\n如果来电时没有全屏显示，而是以通知栏形式出现，请在系统电话APP的设置里开启“来电弹窗”或“全屏来电”选项。\n\n常见手机品牌的设置路径：\n• 小米：电话APP → 设置 → 来电时全屏显示\n• 华为：电话APP → 设置 → 来电弹窗\n• OPPO / vivo：电话APP → 设置 → 来电时显示弹窗\n\n三、温馨提示\n\n如果您不确定如何设置，可以请家人帮忙，或直接保持系统默认的电话应用，它通常已经具备完善的防护功能。" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/keysArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/back"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

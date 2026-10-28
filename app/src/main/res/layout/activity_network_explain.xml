@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/screenArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/network_explain_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一、联网功能总开关"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp"
+                android:text="控制本应用所有联网功能的总开关。默认关闭。关闭后，本应用不会发起任何网络请求，天气模块将显示&quot;--°&quot;。打开后，本应用可使用网络获取天气等信息。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="二、为什么没有单独的WiFi/蓝牙/移动数据开关"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp"
+                android:text="由于Android系统限制，普通应用无法直接在应用内开关WiFi、蓝牙和移动数据。这些系统级开关需要在系统设置中操作。因此本应用只提供联网总开关，用于控制本应用自身是否使用网络。如需开关WiFi、蓝牙或移动数据，请在系统设置中操作。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="三、天气模块"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp"
+                android:text="主界面的显示模块可选择&quot;天气&quot;，该功能需要联网。使用Open-Meteo免费天气接口，无需注册，数据每30分钟刷新一次。联网总开关关闭时天气不更新，显示&quot;--°&quot;。天气模块会获取当前位置以显示当地天气。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="四、安全性说明"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.3"
+                android:text="本应用仅在天气模块中使用网络，且仅访问Open-Meteo公开接口，不收集、不上传任何个人数据。联网总开关关闭后，应用完全离线运行，不会产生任何网络流量。" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/keysArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="0dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/back"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

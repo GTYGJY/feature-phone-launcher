@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/screenArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关于"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 应用信息 -->
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="功能机模式"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="版本 1.1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 开发者信息 -->
+            <TextView
+                android:id="@+id/tvDeveloper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本应用由紫空幻影与 AI 共同设计开发"
+                android:textSize="15sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginVertical="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 免费软件提示 -->
+            <TextView
+                android:id="@+id/tvFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本软件为免费软件，永久免费使用，不包含任何付费内容、广告或内购项目。若你以任意渠道付费获取该软件，请进行退款并维护自身权益。\n\n天气数据由 Open-Meteo 提供，采用 CC BY 4.0 许可证。"
+                android:textSize="15sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginVertical="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 免责声明 -->
+            <TextView
+                android:id="@+id/tvDisclaimerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="免责声明"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDisclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 本软件仅供学习和个人使用，不得用于任何商业用途。\n\n2. 本软件按现状提供，尽力保障功能稳定，但不保证在所有品牌、所有系统版本的手机上均完美运行，不对因使用本软件造成的任何直接或间接损失承担责任。\n\n3. 本软件不会收集、上传或泄露用户的任何个人信息、通讯录、通话记录、短信内容等隐私数据。\n\n4. 本软件的天气数据来源于第三方公开接口，数据准确性以接口提供方为准。\n\n5. 紧急电话（110、120、119等）功能依赖手机系统、SIM卡和运营商网络，请确保手机处于正常服务状态。拨打紧急电话时，系统会跳转到手机自带的拨号界面，需要再次点击拨打键才能完成呼叫。如遇紧急情况但软件无法正常使用，请直接使用手机系统拨号或其他方式求助。\n\n6. 如果从不明渠道获取本软件，软件开发者不承担软件可能被他人修改引发的不良后果。\n\n7. 通过本软件启动的其他应用程序，其功能、内容和行为由该应用的开发者负责，与本软件无关。\n\n8. 因手机硬件故障、电量耗尽、系统更新、运营商网络异常、信号不佳等非本软件原因导致的功能异常，本软件不承担责任。\n\n9. 用户应妥善保管手机，防止他人误操作或恶意使用。利用本软件从事任何违法违规活动，责任由用户自行承担。\n\n10. 本软件的Kiosk锁定模式、设备管理员、后台应用管理等功能需要通过ADB命令或系统高级设置开启，本软件并未对所有设备和系统版本进行完善测试。在非必要情况下不建议开启这些功能，本软件不对开启这些功能可能造成的严重后果（包括但不限于无法退出、无法卸载、系统异常等）负责。\n\n11. 使用本软件即表示您已阅读并同意以上条款。"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 权限说明 -->
+            <TextView
+                android:id="@+id/tvPermissionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="权限说明"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本软件申请的所有权限仅用于对应功能的正常使用，不会收集、上传或泄露您的任何个人信息：\n\n• 电话权限：用于拨打电话和紧急呼叫\n• 通讯录权限：用于显示和添加联系人\n• 短信权限：用于查看和发送短信\n• 通话记录权限：用于显示通话记录\n• 位置权限：用于获取当地天气信息\n• 震动权限：用于按键震动反馈\n• 设备管理员权限（可选）：用于锁屏和Kiosk锁定模式，需用户手动激活"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 开源组件声明 -->
+            <TextView
+                android:id="@+id/tvOpensourceTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开源组件声明"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvOpensource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本软件使用了以下开源技术：\n\n• Android SDK（Apache License 2.0）\n• Kotlin 标准库（Apache License 2.0）\n• AndroidX（Apache License 2.0）\n• Open-Meteo 天气API（CC BY 4.0）\n• T9智能拨号匹配算法（参考开源社区通用实现思路，基于Unicode范围的汉字拼音首字母匹配）\n\n以上开源组件的许可证条款适用于相应组件，本软件尊重并遵守所有开源许可证要求。"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 隐私政策 -->
+            <TextView
+                android:id="@+id/tvPrivacyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="隐私政策"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本软件高度重视用户隐私保护：\n\n• 本软件不收集、不上传、不泄露任何个人信息，包括通讯录、通话记录、短信内容、位置信息等\n• 本软件不使用任何第三方统计、广告或数据分析SDK\n• 申请的所有权限仅用于对应功能的本地实现，数据仅存储在您的手机本地\n• 天气数据请求仅携带经纬度坐标，不携带任何个人身份信息\n• 本软件不会将您的任何数据分享给第三方\n\n如您对隐私保护有任何疑问，请停止使用本软件。"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 紧急情况处理 -->
+            <TextView
+                android:id="@+id/tvEmergencyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="紧急情况处理"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvEmergency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="如遇以下情况，请按对应方法处理：\n\n• 在其他应用中被广告或误操作跳转：按手机Home键即可立即返回功能机模式\n• 软件卡死或无响应：长按手机电源键10秒强制重启\n• 无法退出功能机模式：按挂断键（红色）可返回桌面，或在设置中关闭默认桌面\n• 激活设备管理员后无法卸载：先进入系统设置→安全→设备管理员，取消本应用的管理员权限，再正常卸载\n• Kiosk模式无法退出：需通过ADB命令解除，或恢复手机出厂设置（请先备份数据）\n• 紧急电话无法拨打：直接使用手机系统拨号，或长按电源键选择紧急呼叫\n\n建议老年人用户由家属协助初次设置，并将家属电话加入通讯录。"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 致谢 -->
+            <TextView
+                android:id="@+id/tvThanksTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="致谢"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvThanks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="感谢所有为老年人易用性设计提供建议的用户。\n\n本软件致力于让老年人也能轻松使用智能手机。"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/keysArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="0dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="返回"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>
